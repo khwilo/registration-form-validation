@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,700&display=swap');
+
+:root {
+  font-size: calc(0.5em + 1vw);
+
+  --ff-content: 'IBM Plex Sans', sans-serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --clr-black: #000000;
+  --clr-white: #ffffff;
+  --clr-blue: #2656bd;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-content);
+  font-size: 1em;
+  line-height: 1;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-wrapper {
+  border: 2px solid var(--clr-black);
+  padding: 0.5em;
+  width: 80%;
+}
+
+@media (min-width: 30em) {
+  .form-wrapper {
+    width: 60%;
+  }
+}
+
+@media (min-width: 50em) {
+  .form-wrapper {
+    width: 40%;
+  }
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__group + .form__group {
+  margin-top: 0.5em;
+}
+
+.form__label {
+  font-weight: var(--fw-medium);
+}
+
+.form__control {
+  border: 2px solid var(--clr-black);
+  height: 2.5em;
+  padding: 0.5em;
+  font-size: 0.8em;
+  font-family: var(--ff-content);
+}
+
+.form__group.form__group--submit {
+  margin-top: 1em;
+  display: block;
+}
+
+.form__control--submit {
+  border: none;
+  background-color: var(--clr-blue);
+  color: var(--clr-white);
+  cursor: pointer;
+  height: initial;
+  padding: 0.5em 1em;
+  font-weight: var(--fw-medium);
+  font-size: 0.8em;
+  border-radius: 500px;
+}
