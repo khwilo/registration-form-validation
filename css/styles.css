@@ -12,6 +12,7 @@
   --clr-black: #000000;
   --clr-white: #ffffff;
   --clr-blue: #2656bd;
+  --clr-focus: hsl(41, 67%, 45%);
 }
 
 *,
@@ -31,6 +32,10 @@ body {
 h1 {
   margin: 0;
   margin-bottom: 0.5em;
+}
+
+input:focus {
+  outline: 4px solid var(--clr-focus);
 }
 
 .container {
@@ -64,11 +69,18 @@ h1 {
 }
 
 .form__group + .form__group {
-  margin-top: 0.5em;
+  margin-top: 0.8em;
 }
 
 .form__label {
   font-weight: var(--fw-medium);
+  padding-bottom: 0.2em;
+}
+
+.field-hint {
+  font-weight: var(--fw-regular);
+  font-size: 0.8em;
+  display: inline-block;
 }
 
 .form__control {
