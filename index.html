@@ -14,14 +14,10 @@
     <div class="container">
       <div class="form-wrapper">
         <h1>Register</h1>
-        <form class="form">
+        <form class="form form__validate">
           <div class="form__group">
             <label for="firstName" class="form__label">
               <span class="field-label">First name</span>
-              <span class="field-error">
-                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                <span class="field-error__name">Enter a first name</span>
-              </span>
             </label>
             <input
               type="text"
@@ -35,10 +31,6 @@
           <div class="form__group">
             <label for="lastName" class="form__label">
               <span class="field-label">Last name</span>
-              <span class="field-error">
-                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                <span class="field-error__name">Enter a last name</span>
-              </span>
             </label>
             <input
               type="text"
@@ -52,12 +44,6 @@
           <div class="form__group">
             <label for="emailAddress" class="form__label">
               <span class="field-label">Email address</span>
-              <span class="field-error">
-                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                <span class="field-error__name"
-                  >Enter a valid email address</span
-                >
-              </span>
             </label>
             <input
               type="email"
@@ -73,10 +59,6 @@
               <span class="field-hint">
                 Must contain 8+ characters with at least 1 number, 1 lowercase
                 letter and 1 uppercase letter
-              </span>
-              <span class="field-error">
-                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                <span class="field-error__name">Enter a password</span>
               </span>
             </label>
             <input
