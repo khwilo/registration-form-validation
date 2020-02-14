@@ -4,15 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration form validation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <div class="container">
       <div class="form-wrapper">
         <h1>Register</h1>
-        <form class="form">
+        <form class="form" novalidate>
           <div class="form__group">
-            <label for="firstName" class="form__label">First name</label>
+            <label for="firstName" class="form__label">
+              <span class="field-label">First name</span>
+              <span class="field-error">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                <span class="field-error__name">Enter a first name</span>
+              </span>
+            </label>
             <input
               type="text"
               name="firstName"
@@ -21,7 +31,13 @@
             />
           </div>
           <div class="form__group">
-            <label for="lastName" class="form__label">Last name</label>
+            <label for="lastName" class="form__label">
+              <span class="field-label">Last name</span>
+              <span class="field-error">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                <span class="field-error__name">Enter a last name</span>
+              </span>
+            </label>
             <input
               type="text"
               name="lastName"
@@ -30,7 +46,15 @@
             />
           </div>
           <div class="form__group">
-            <label for="emailAddress" class="form__label">Email address</label>
+            <label for="emailAddress" class="form__label">
+              <span class="field-label">Email address</span>
+              <span class="field-error">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                <span class="field-error__name"
+                  >Enter a valid email address</span
+                >
+              </span>
+            </label>
             <input
               type="email"
               name="emailAddress"
@@ -44,6 +68,10 @@
               <span class="field-hint">
                 Must contain 8+ characters with at least 1 number and 1
                 uppercase letter
+              </span>
+              <span class="field-error">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                <span class="field-error__name">Enter a password</span>
               </span>
             </label>
             <input

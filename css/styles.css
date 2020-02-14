@@ -13,6 +13,7 @@
   --clr-white: #ffffff;
   --clr-blue: #2656bd;
   --clr-focus: hsl(41, 90%, 60%);
+  --clr-error: #c10014;
 }
 
 *,
@@ -23,7 +24,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 1em;
   font-family: var(--ff-content);
   font-size: 1em;
   line-height: 1;
@@ -75,12 +76,22 @@ input:focus {
 .form__label {
   font-weight: var(--fw-medium);
   padding-bottom: 0.2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.field-hint,
+.field-error {
+  font-size: 0.8em;
 }
 
 .field-hint {
   font-weight: var(--fw-regular);
-  font-size: 0.8em;
-  display: inline-block;
+}
+
+.field-error {
+  color: var(--clr-error);
+  padding: 0.2em 0;
 }
 
 .form__control {
