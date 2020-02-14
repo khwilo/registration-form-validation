@@ -102,7 +102,6 @@ input:focus {
   margin-right: 0.5em;
   height: 1rem;
   width: 1rem;
-  cursor: pointer;
 }
 
 .password-reveal .field-label {
@@ -120,10 +119,13 @@ input:focus {
   border: none;
   background-color: var(--clr-blue);
   color: var(--clr-white);
-  cursor: pointer;
   height: initial;
   padding: 0.5em 1em;
   font-weight: var(--fw-medium);
   font-size: 0.8em;
   border-radius: 500px;
+}
+
+.form__control--submit:hover {
+  background-color: var(--clr-focus);
 }
