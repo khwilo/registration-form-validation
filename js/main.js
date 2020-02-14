@@ -50,7 +50,8 @@ const hasError = (field) => {
 };
 
 const displayError = (field, error) => {
-  field.classList.add('error');
+  // Add invalid class from the field
+  field.classList.add('invalid');
 
   // Get the field id or name
   const id = field.id || field.name;
@@ -80,8 +81,8 @@ const displayError = (field, error) => {
 };
 
 const removeError = (field) => {
-  // Remove error class from the field
-  field.classList.remove('field-error');
+  // Remove invalid class from the field
+  field.classList.remove('invalid');
 
   // Remove ARIA role form the field
   field.removeAttribute('aria-describedby');
