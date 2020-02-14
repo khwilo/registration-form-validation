@@ -97,8 +97,7 @@ input:not(:focus):invalid {
 
 .field-error {
   color: var(--clr-error);
-  padding: 0.2em 0;
-  display: none;
+  padding: 0.2em 0 0.4em;
 }
 
 .form__control {
