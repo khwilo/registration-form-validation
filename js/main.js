@@ -124,3 +124,31 @@ toggleRevealPassword.addEventListener('change', (event) => {
     passwordField.type = 'password';
   }
 });
+
+// Check all fields on submit
+document.addEventListener('submit', (event) => {
+  // If the forms has not been flagged for validation, don't run
+  if (!event.target.classList.contains('form__validate')) return;
+
+  const fields = event.target.elements;
+
+  // Validate each field
+  let error;
+  let hasErrors;
+  for (let i = 0; i < fields.length; i += 1) {
+    error = hasError(fields[i]);
+    if (error) {
+      displayError(fields[i], error);
+      if (!hasErrors) {
+        hasErrors = fields[i];
+      }
+    }
+  }
+
+  // If there are errors, don't submit form and focus on first element with error
+  if (hasErrors) {
+    event.preventDefault();
+    hasErrors.focus();
+  }
+
+}, false);
