@@ -14,7 +14,7 @@
     <div class="container">
       <div class="form-wrapper">
         <h1>Register</h1>
-        <form class="form" novalidate>
+        <form class="form">
           <div class="form__group">
             <label for="firstName" class="form__label">
               <span class="field-label">First name</span>
@@ -28,6 +28,8 @@
               name="firstName"
               id="firstName"
               class="form__control"
+              minlength="2"
+              required
             />
           </div>
           <div class="form__group">
@@ -43,6 +45,8 @@
               name="lastName"
               id="lastName"
               class="form__control"
+              minlength="2"
+              required
             />
           </div>
           <div class="form__group">
@@ -60,14 +64,15 @@
               name="emailAddress"
               id="emailAddress"
               class="form__control"
+              required
             />
           </div>
           <div class="form__group">
             <label for="password" class="form__label">
               <span class="field-label">Password</span>
               <span class="field-hint">
-                Must contain 8+ characters with at least 1 number and 1
-                uppercase letter
+                Must contain 8+ characters with at least 1 number, 1 lowercase
+                letter and 1 uppercase letter
               </span>
               <span class="field-error">
                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
@@ -79,6 +84,10 @@
               name="password"
               id="password"
               class="form__control"
+              minlength="8"
+              pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+              title="Please include at least 1 number, 1 lowercase letter and 1 upper case letter. Password length must be greater or equal to 8"
+              required
             />
             <section class="password-reveal">
               <input
