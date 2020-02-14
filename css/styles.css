@@ -39,6 +39,12 @@ input:focus {
   outline: 4px solid var(--clr-focus);
 }
 
+/* Style invalid selectors only when they're currently not being edited */
+input:not(:focus):invalid {
+  outline: 2px solid var(--clr-error);
+  border: none;
+}
+
 .container {
   display: flex;
   justify-content: center;
